@@ -1,13 +1,13 @@
+import { useState } from 'react';
 import styles from './App.module.css';
 import CitySelector from './components/CitySelector';
 import WeatherDisplay from './components/WeatherDisplay';
-import { useState } from 'react';
 import { weatherData } from './data/weatherData';
-
-
 
 function App() {
   const [selectedCityId, setSelectedCityId] = useState<string | null>(null);
+  const selectedCity = weatherData.find((city) => city.id === selectedCityId);
+
 
   return (
     <main className={styles.app}>
@@ -17,7 +17,13 @@ function App() {
         selectedCityId={selectedCityId}
         onSelect={setSelectedCityId}
       />
-      <WeatherDisplay />
+      {selectedCity ? (
+      <WeatherDisplay 
+      weather={selectedCity}
+       />
+      ) : (
+        <p>Select a City to see its weather</p>
+      )}
     </main>
   );
 }

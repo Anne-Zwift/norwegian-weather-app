@@ -1,11 +1,23 @@
+import styles from './WeatherCard.module.css';
 import WeatherIcon from "./WeatherIcon";
+import type { WeatherData } from '../data/weatherData';
 
-function WeatherCard() {
+interface WeatherCardProps {
+  weather: WeatherData;
+}
+
+function WeatherCard({ weather }: WeatherCardProps) {
+
   return (
-    <div>
-      <h2>Weather Card Component</h2>
+    <article className={styles.card}>
       <WeatherIcon />
-    </div>
+      <p>Temperature: {weather.temperature}℃</p>
+      <p>Weather Condition: {weather.condition}</p>
+      <p>Humidity: {weather.humidity}%</p>
+      <p>Wind Speed: {weather.windSpeed}km/h</p>
+      <p>Description: {weather.description}</p>
+      <p>Last Updated: {weather.lastUpdated}</p>    
+    </article>
   );
 }
 

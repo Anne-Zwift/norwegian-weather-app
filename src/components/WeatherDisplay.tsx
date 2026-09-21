@@ -1,10 +1,19 @@
+import styles from './WeatherDisplay.module.css';
 import WeatherCard from "./WeatherCard";
+import type { WeatherData } from '../data/weatherData';
 
-function WeatherDisplay() {
+
+interface WeatherDisplayProps {
+  weather: WeatherData;
+}
+
+
+function WeatherDisplay({ weather }: WeatherDisplayProps) {
+
   return (
-    <div>
-      <h2>Weather Display Component</h2>
-      <WeatherCard />
+    <div className={styles.display}>
+      <h2>{weather.city}</h2>
+      <WeatherCard weather={weather} />
     </div>
   );
 }
