@@ -3,6 +3,16 @@
   border-radius: var(--radius-lg);
   padding: calc(var(--spacing-md) * 1.5);
   box-shadow: 0 4px 12px rgba(0, 32, 91, 0.12);
-  width: 350px;
+  width: min(350px, 100%);
   margin: 0 auto;
+}
+
+@media (max-width: 340px) {
+  .card {
+    padding: var(--spacing-md);
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
 }
