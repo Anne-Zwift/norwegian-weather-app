@@ -1,10 +1,18 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+:root {
+  --color-primary: #002058;
+  --color-secondary: #BA0c2f;
+  --color-accent: #0077cb;
+  --color-light: #f4f7fa;
+  --color-dark: #1a1a2e;
+  --spacing-md: 1rem;
+  --radius-lg: 12px;
 }
 
 body {
-  font-family: sans-serif;
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--color-dark);
+  background-color: var(--color-light);
   line-height: 1.5;
 }
+

@@ -16,7 +16,7 @@ function WeatherCard({ weather }: WeatherCardProps) {
       <p>Humidity: {weather.humidity}%</p>
       <p>Wind Speed: {weather.windSpeed}km/h</p>
       <p>Description: {weather.description}</p>
-      <p>Last Updated: {weather.lastUpdated}</p>    
+      <p>Last Updated: {new Date(weather.lastUpdated).toLocaleDateString(`nb-NO`)}</p>    
     </article>
   );
 }

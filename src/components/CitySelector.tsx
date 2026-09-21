@@ -10,10 +10,10 @@ interface CitySelectorProps {
 function CitySelector({ cities, selectedCityId, onSelect }: CitySelectorProps) {
   return (
     <section>
-      <h2>City Selector Component</h2>
       <ul className={styles.cityList}>{cities.map((city) => (
         <li key={city.id}> 
-          <button type='button' onClick={() => onSelect(city.id)} className={city.id === selectedCityId ? styles.selected : undefined}>
+          <button type='button' onClick={() => onSelect(city.id)} className={`${styles.cityButton} ${city.id === selectedCityId ? styles.selected : ''}`}
+            >
             {city.city}
           </button>
         </li>
