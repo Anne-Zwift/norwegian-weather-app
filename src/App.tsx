@@ -4,6 +4,7 @@ import CitySelector from './components/CitySelector';
 import WeatherDisplay from './components/WeatherDisplay';
 import { weatherData } from './data/weatherData';
 
+
 function App() {
   const [selectedCityId, setSelectedCityId] = useState<string | null>(null);
   const selectedCity = weatherData.find((city) => city.id === selectedCityId);
