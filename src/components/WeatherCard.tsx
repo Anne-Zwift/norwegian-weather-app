@@ -10,7 +10,7 @@ function WeatherCard({ weather }: WeatherCardProps) {
 
   return (
     <article className={styles.card}>
-      <WeatherIcon />
+      <WeatherIcon condition={weather.condition} />
       <p>Temperature: {weather.temperature}℃</p>
       <p>Weather Condition: {weather.condition}</p>
       <p>Humidity: {weather.humidity}%</p>

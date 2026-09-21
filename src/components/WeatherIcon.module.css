@@ -1,0 +1,9 @@
+.icon {
+  font-size: 3rem;
+  display: block;
+  margin: 0 auto 1rem auto;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 1;
+}
