@@ -1,7 +1,7 @@
 function WeatherIcon() {
   return (
     <div>
-      <h2>Weather Icon Component</h2>
+      <h2></h2>
     </div>
   );
 }
